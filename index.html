@@ -20,6 +20,8 @@
     <div data-created='1724121273725'>
     </div>
   </div>
+
+  <button onclick="updateCC()">Update aria-live</button>
   
   <h2>No ARIA via textContent</h2>
   <div id='output'>
@@ -33,6 +35,7 @@
     Finally, Line 4
   </div>
 
+
   <script>
     window.onload = () => {
       // console.log('main');
@@ -43,7 +46,17 @@
         'Finally, Line 4',
       ];
       document.querySelector('#cc div').textContent = outputArray.join('\r\n');
-      document.querySelector('#output').textContent = outputArray.join('\r\n');
+      document.querySelector('#output').textContent = outputArray.join('\r\n');  
+    }
+
+    function updateCC () {
+      const outputArray2 = [
+        'Twas brillig and the slithy toves',
+        'Did gyre and gimble in the wabe',
+        'All mimsy were the borogoves,',
+        'And the mome raths outgrabe.',
+      ];
+      document.querySelector('#cc div').textContent = outputArray2.join('\r\n');   
     }
   </script>
 </body>
