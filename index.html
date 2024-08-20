@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>white-space: pre-line</title>
+  <style>
+    div#cc {
+      white-space: pre-line;
+    }
+  </style>
+</head>
+<body>
+  <div id='cc' aria-live='assertive' role='status' aria-atomic='true' aria-relevant='additions text' lang='en'>
+    <div data-created='1724121273725'>
+    </div>
+  </div>
+
+  <script>
+    window.onload = () => {
+      // console.log('main');
+      const outputArray = [
+        'This is the first line',
+        'This is Line 2',
+        'Now Line 3',
+        'Finally, Line 4',
+      ];
+      document.querySelector('#cc div').textContent = outputArray.join('\r\n');
+    }
+  </script>
+</body>
+</html>
